@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg fill-opacity='0.85'%3E%3Ccircle fill='%234A1A55' cx='50' cy='0' r='50'/%3E%3Cg fill='%23521b59' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%235a1c5e' cx='50' cy='100' r='50'/%3E%3Cg fill='%23621d62' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%236b1d65' cx='50' cy='200' r='50'/%3E%3Cg fill='%23741d69' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%237d1d6c' cx='50' cy='300' r='50'/%3E%3Cg fill='%23861d6f' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%238f1d72' cx='50' cy='400' r='50'/%3E%3Cg fill='%23981c75' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a11b77' cx='50' cy='500' r='50'/%3E%3Cg fill='%23ab1a79' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b4197b' cx='50' cy='600' r='50'/%3E%3Cg fill='%23bd187c' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c7177d' cx='50' cy='700' r='50'/%3E%3Cg fill='%23d0157e' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23da147f' cx='50' cy='800' r='50'/%3E%3Cg fill='%23e3127f' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23ed127f' cx='50' cy='900' r='50'/%3E%3Cg fill='%23f6117f' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23FF127E' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+svg {
+  position: absolute;
+  width: 500px;
+  height: 400px;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+.line {
+  --colorA: #f24949;
+  fill: none;
+  stroke-width: 10;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke: #fff;
+  stroke-dasharray: 328 600;
+  animation: rotate 2s infinite linear;
+
+  filter: drop-shadow(0 0 2px var(--colorA)) drop-shadow(0 0 5px var(--colorA))
+    drop-shadow(0 0 10px var(--colorA)) drop-shadow(0 0 15px var(--colorA))
+    drop-shadow(0 0 25px var(--colorA));
+}
+
+.line2 {
+  animation: rotate 2s infinite -1s linear;
+  --colorA: #37ff69;
+}
+
+@keyframes rotate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 928;
+  }
+}
